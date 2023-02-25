@@ -22,7 +22,25 @@ function ingredienteEnMalEstado(menu, comida, ingrediente) {
   // NOTA: No utilizar el método "includes".
   //
   // Tu código:
+  let nuevoArray = [];
 
+  const ingredientes = menu[comida]; 
+
+  if (ingredientes && ingredientes.length) {
+    for (let i = 0; i < ingredientes.length; i++) {
+      if (ingredientes[i] === ingrediente) {
+        if (i === 0) { //esta linea verifica que sea el primer ingrediente, por eso no resta ninguno
+          nuevoArray.push(ingredientes[i]);
+          nuevoArray.push(ingredientes[i + 1]);
+        } else { //si no es la primera, suma y resta para mostrar lo que hay en el iterador(su indice)
+          nuevoArray.push(ingredientes[i - 1]);
+          nuevoArray.push(ingredientes[i]);
+          nuevoArray.push(ingredientes[i + 1]);
+          }
+        }
+      }
+    }
+  return(nuevoArray)
 };
 
 

@@ -11,7 +11,12 @@ function intercambio(objeto) {
   // NOTA: No utilizar métodos de Object (values, keys, entries);
   //
   // Tu código:
-
+  var resultado = {}
+        for(let i in objeto){
+            resultado[objeto[i]] = i //Esta es la linea que se encarga de invertir el objeto
+        }
+        return resultado
+    
 };
 
 // No modifiques nada debajo de esta linea //

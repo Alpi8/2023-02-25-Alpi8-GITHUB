@@ -13,6 +13,13 @@ function buscaDestruye(arreglo, num) {
   // Ej: buscaDestruye([1, 2, 3, 4, 1], 1) devuelve => [2, 3, 4]
   //
   // Tu código aca:
+  nuevoArray = []
+  for (let i in arreglo){
+      if(num != arreglo[i]){
+          nuevoArray.push(arreglo[i])
+      }
+  }
+return (nuevoArray)
   
 };
 

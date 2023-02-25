@@ -22,7 +22,23 @@ function bienvenidoSr(persona) {
   // "Disculpe señor, no está invitado a la fiesta".
   //
   // Tu código:
+  for (let i in persona) {
+    if (persona.invitado == true ){      
 
+      if (persona.apellido == undefined){
+        return ("Hola "+ persona.nombre + ", tu mesa está lista");
+
+        } else if (persona.nombre == undefined){
+        return ("Bienvenido Sr. "+ persona.apellido);
+
+        } else 
+        return (persona.nombre + " " + persona.apellido + ", un gusto tenerlo nuevamente! Bienvenido")
+        }
+
+        else if (persona.invitado == undefined){
+        return ("Disculpe señor, no está invitado a la fiesta")
+        } 
+      }
 };
 
 // No modifiques nada debajo de esta linea //
